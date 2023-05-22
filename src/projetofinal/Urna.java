@@ -54,6 +54,11 @@ public class Urna extends javax.swing.JFrame {
                 addCandidatoLista(c13);
                 JOptionPane.showMessageDialog(null, "Voto em "+c13.getNome()+" computado com sucesso!");
             }
+            case "Branco"->{
+                votoBranco.setVotos();
+                addCandidatoLista(votoBranco);
+                JOptionPane.showMessageDialog(null, votoBranco.getNome()+" computado com sucesso!");
+            }
         }
     }
     
@@ -696,6 +701,7 @@ public class Urna extends javax.swing.JFrame {
 
     private void btnbrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbrancoActionPerformed
         txtNumero.setText(txtNumero.getText()+"Voto em Branco");
+        lblNome.setText(votoBranco.getNome());
     }//GEN-LAST:event_btnbrancoActionPerformed
 
     private void btncorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncorrigirActionPerformed
